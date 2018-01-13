@@ -1,3 +1,13 @@
+"""
+Problem: Uncertainties in types of objects or
+Decisions to be made at runtime ragarding what classes to use
+
+Scenario: Pet shop
+Only dogs originally
+now cats too
+"""
+
+
 class Dog(object):
 
   def __init__(self, name):
