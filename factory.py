@@ -35,3 +35,26 @@ print(d.speak())
 
 c = get_pet(pet="cat")
 print(c.speak())
+
+
+
+class ShapeInterface():
+  def draw(self): pass
+
+class Circle(ShapeInterface):
+  def draw(self):
+    print("circle.draw")
+
+
+class Square(ShapeInterface):
+  def __init__(self):
+    print("square.draw")
+
+class ShapeFactory():
+  @staticmethod
+  def getShape(type):
+    if type=='circle':
+      return Circle()
+    if type=='square':
+      return Square()
+    assert 0, 'Could not find shape'
