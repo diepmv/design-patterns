@@ -51,15 +51,41 @@ shop.show_pet()
 
 
 
+#=========================================================================
+import abc
 
 
+class AbstractFactory(metaclass=abc.ABCMeta):
 
+  @abc.abstractstaticmethod
+  def create_sport_model(self):
+    pass
+  @abc.abstractstaticmethod
+  def create_economy_model(self):
+    pass
+  @abc.abstractstaticmethod
+  def create_luxury_model(self):
+    pass
 
+class FordFactory(AbstractFactory):
+  """Concrete factory"""
+  @staticmethod
+  def create_sport_model(self):
+    return "Sport model"
 
+  @staticmethod
+  def create_economy_model(self):
+    return "Economy model"
 
+  @static method
+  def create_luxury_model(self):
+    return "Luxury model"
 
+class AbsAuto(metaclass=abc.ABCMeta):
+  @abstractmethod
+  def start(self):
+    pass
 
-
-
-
-
+  @abstractmethod
+  def stop(self):
+    pass
